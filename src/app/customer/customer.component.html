@@ -1,0 +1,43 @@
+<body>
+<h1>customer details:</h1>
+<form [formGroup]="customerdata" (ngSubmit)="customerDetails()">
+<label>
+<input type="text" placeholder="Customer name" formControlName="customerName">
+</label> <br>
+
+<label>
+    <input type="text" placeholder="customerID" formControlName="customerID">
+</label> <br>
+
+<label>
+    <input type="email" placeholder="email" formControlName="email">
+</label> <br>
+
+<label>
+    <input type="serialNo" placeholder="serialNo" formControlName="serialNo">
+</label> <br>
+
+<h1>productDetails :</h1>
+<label>
+    <input type="text" placeholder="productID" formControlName="productID">
+</label> <br>
+
+<label>
+    <input type="text" placeholder="productName" formControlName="productName">
+</label> <br>
+
+<label>
+    <div>
+      <input id="online" type="radio" value="online" name="mode" formControlName="mode">
+      <label for="online">online</label>
+   </div>
+  
+   <div>
+      <input id="offline" type="radio" value="offline" name="mode" formControlName="mode">
+      <label for="offline">offline</label>
+   </div>
+  </label> <br>
+
+<button ngtype="submit" name="button">Submit</button>
+</form>
+</body>

@@ -1,0 +1,115 @@
+<h1><b>REGISTRATION FORM:</b></h1>
+<form [formGroup]="biodata" (ngSubmit)="addUser()">
+  <h1>biodata</h1>
+  <label>
+    <h3>First Name:</h3>
+    <input type="text" placeholder="firstname" formControlName="firstName">
+    <div *ngIf="getControl.firstName.touched && getControl.firstName.invalid" class="text-danger">
+      <div *ngIf="getControl.firstName.errors?.required">First Name is required.</div>
+      <div *ngIf="getControl.firstName.errors?.minlength">Minimum 4 character are required.</div>
+  </div>
+  </label>  <br>
+  <label>
+    <h3>Last Name:</h3>
+    <input type="text" placeholder="lastname" formControlName="lastName">
+    <div *ngIf="getControl.lastName.touched && getControl.lastName.invalid" class="text-danger">
+      <div *ngIf="getControl.lastName.errors?.required">last Name is required.</div>
+      <div *ngIf="getControl.lastName.errors?.minlength">Minimum 4 character are required.</div>
+  </div>
+  </label> <br>
+  <label>
+    <h3>Age:</h3>
+    <input type="number" placeholder="age" formControlName="age">
+    <div *ngIf="getControl.age.touched && getControl.age.invalid" class="text-danger">
+      <div *ngIf="getControl.age.errors?.required">age is required.</div>
+      </div>
+  </label>  <br>
+  <label>
+    <h3>Number</h3>
+    <input type="number" placeholder="number" formControlName="number">
+    <div *ngIf="getControl.number.touched && getControl.number.invalid" class="text-danger">
+      <div *ngIf="getControl.number.errors?.required">number is required.</div>
+      <div *ngIf="getControl.number.errors?.minlength">Minimum 10 character are required.</div>
+  </div>
+  </label> <br>
+  <label>
+      <h3>Degree:</h3>
+      <input type="text" placeholder="Degree" formControlName="Degree">
+      </label> <br>
+<label>
+  <h3>DOB:</h3>
+  <input type="date" placeholder="DOB" formControlName="DateoBirth">
+</label> <br>
+<label>
+  <div>
+    <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+    <label for="male">Male</label>
+ </div>
+
+ <div>
+    <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+    <label for="female">Female</label>
+ </div>
+</label>
+  <h1>userdetails</h1>
+  <label>
+    <h3>User Name:</h3>
+   <input type="email" placeholder="email" formControlName="email">
+   <div *ngIf="getControl.email.touched && getControl.email.invalid" class="alert alert-danger">
+    <div *ngIf="getControl.email.errors?.required">Email is required.</div>
+    <div *ngIf="getControl.email.errors?.email">Please, enter valid email address.</div>
+</div>
+  </label> <br>
+  <label>
+    <h3>Password:</h3>
+    <input type="password" placeholder="password" formControlName="password">
+    <div *ngIf="getControl.password.touched && getControl.password.invalid" class="text-danger">
+      <div *ngIf="getControl.password.errors?.required">First Name is required.</div>
+      <div *ngIf="getControl.password.errors?.minlength">Minimum 8 character are required.</div>
+      <div *ngIf="getControl.password.errors?.maxlength">Maximum 8 character are required.</div>
+  </div>
+  </label> <br>
+  <label>
+    <h3>Re Enter your password:</h3>
+    <input type="password" placeholder="re-enter password" formControlName="password2">
+    <div *ngIf="getControl.password2.touched && getControl.password2.invalid" class="text-danger">
+      <div *ngIf="getControl.password2.errors?.required">First Name is required.</div>
+      <div *ngIf="getControl.password2.errors?.minlength">Minimum 8 character are required.</div>
+      <div *ngIf="getControl.password2.errors?.maxlength">Maximum 8 character are required.</div>
+  </div>
+  </label> <br>
+    <h1>Address</h1>
+    <label>
+        <h3>Country:</h3>
+        <input type="text" placeholder="Country" formControlName="Country">
+    </label> <br>
+    <label>
+        <h3>City:</h3>
+        <input type="text" placeholder="City" formControlName="City">
+    </label> <br>
+    <label>
+      <h3>Permanent Address:</h3>
+      <input type="text" placeholder="Address.." formControlName="Address">
+    </label>  <br>
+  <h1>StudiesDetails</h1>
+  <label>
+    <h3>Designation:</h3>
+    <input type="text" placeholder="Designation" formControlName="Designation">
+  </label> <br>
+  <label>
+    <h3>Experiance:</h3>
+    <input type="text" placeholder="Experiance" formControlName="Experiance">
+  </label> <BR>
+  <label>
+    <h3>COCurriculam:</h3>
+    <input type="text" placeholder="CO-Curriculam" formControlName="COCurriculam">
+  </label> <br>
+  <label>
+    <h1>PinCode:</h1>
+    <input type="number" placeholder="PinCode" formControlName="PinCode">
+  </label> <br>
+ <button ngtype="submit" name="button">Submit Application</button><br>
+</form>
+ 
+ 
+ 

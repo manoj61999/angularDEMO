@@ -1,0 +1,19 @@
+<body class="main">
+  <h1 class="flogin">LOGIN FORM</h1>
+  <form [formGroup]="userdetails" (ngSubmit)="loginFunction()">
+    <label>
+      <h3 class="uname"><b>User Name:</b></h3>
+      <input class="unamein" type="text" placeholder="userName"  formControlName="userName" required>
+    </label> <br>
+    <label>
+      <h3 class="pasw"><b>password:</b></h3>
+      <input class="pws" type="password" placeholder="password" formControlName="password" required>
+    </label> <br>
+<button (click)="showData($event)" class="button" ngtype="submit" name="button">Login</button>{{name}} <br>
+<a [routerLink]="['/register']">forgot password ?</a>
+
+
+<input type="file" id="myFile" name="filename">
+  <input type="submit">
+  </form>
+</body> 

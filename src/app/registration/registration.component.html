@@ -1,0 +1,87 @@
+<div>
+    <h1>Angular HTML Table Example</h1>
+    <table>
+       <thead>
+          <tr>
+             <th>_id</th> <br>
+             <th>firstname</th> <br>
+             <th>lastname</th> <br>
+             <th>email</th> <br>
+             <th>password</th> <br>
+             <th>mobile</th> <br>
+             <th>dob</th> <br>
+           
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let item of Users">
+             <th>{{ item._id }}</th> <br>
+             <th>{{ item.firstname }}</th> <br>
+             <td>{{ item.lastname }}</td> <br>
+             <td>{{ item.email }}</td> <br>
+             <td>{{ item.password}}</td> <br>
+             <td>{{ item.phone}}</td> <br>
+             <td>{{ item.dob}}</td> <br>
+          </tr>
+       </tbody>
+    </table>
+ </div>
+
+ <div>
+   <h1>product and customer Table </h1>
+   <table>
+      <thead>
+         <tr>
+            <th>_id</th> <br>
+            <th>productname</th> <br>
+            <th>productid</th> <br>
+            <th>email</th> <br>
+            <th>customerid</th> <br>
+            <th>phone</th> <br>
+            <th>address</th> <br>
+          
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let items1 of Product">
+            <th>{{ items1._id }}</th> <br>
+            <th>{{ items1.productname }}</th> <br>
+            <td>{{ items1.productid }}</td> <br>
+            <td>{{ items1.email }}</td> <br>
+            <td>{{ items1.customerid}}</td> <br>
+            <td>{{ items1.phone}}</td> <br>
+            <td>{{ items1.address}}</td> <br>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<div>
+   <h1>product and customer Table </h1>
+   <table>
+      <thead>
+         <tr>
+            <th>_id</th> <br>
+            <th>orderid</th> <br>
+            <th>productname</th> <br>
+            <th>productquantity</th> <br>
+            <th>productprice</th> <br>
+            <th>totalprice</th> <br>
+            <th>Address</th> <br>
+          
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let items2 of Order">
+            <th>{{ items2._id }}</th> <br>
+            <th>{{ items2.orderid }}</th> <br>
+            <td>{{ items2.productname }}</td> <br>
+            <td>{{ items2.productquantity }}</td> <br>
+            <td>{{ items2.productprice }}</td> <br>
+            <td>{{ items2.totalprice }}</td> <br>
+            <td>{{ items2.address }}</td> <br>
+         </tr>
+      </tbody>
+   </table>
+</div>
+

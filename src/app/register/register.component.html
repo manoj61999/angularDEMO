@@ -1,0 +1,55 @@
+<body>
+
+<h2>Registration Form</h2>
+
+<form #profile="ngForm" (ngSubmit)="onClickSubmit(profile.value)"> 
+  <div class="container">
+    <label for="uname"><b>First Name :</b></label>
+    <input type="text" placeholder="Enter firstname" name="firstname" required ngModel>
+    <br><br>
+
+    <label for="uname"><b>Last Name :</b></label>
+    <input type="text" placeholder="Enter lastname" name="lastname" required ngModel>
+    <br><br>
+
+    <label for="password"><b>Password :</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required ngModel>
+    <br><br>
+
+    <label for="psw2"><b>Re-Enter your Password :</b></label>
+    <input type="password" placeholder="Re-Enter Password" name="psw2" required ngModel>
+    <br><br>
+
+    <label for="Address"><b>Enter your Permanent Address :</b></label>
+    <input type="text" placeholder="Address" name="Address" required ngModel><br>
+    <br>
+    <div>
+        <hr><br>
+    </div>
+    <label for="dob"><b>Date of Birth : </b></label>
+    <input type="text" placeholder="Date of Birth" name ="dob" required ngModel><br>
+    <br>
+
+    <label for="email"><b>Enter your MailI'd : </b></label>
+    <input type="text" placeholder="Enter your MailI'd" name="email" required ngModel><br>
+    <br>
+
+    <label for="Number"><b>Enter Mobile Number : </b></label> 
+    <input type="text" placeholder="Mobile Number" name="mobile" required="Number" ngModel><br>
+    <br>
+
+    
+    <button ngtype="submit" value="Register">Register</button>{{name}}
+ 
+  
+
+  <div class="align">
+    <p><b>(OR)</b></p>
+  </div>
+  
+  <div class="container" style="background-color:#eeebf1">
+    <button type="button" class="Loginbtn">Login</button >
+  </div>
+</div>
+</form>
+</body>

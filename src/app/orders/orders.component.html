@@ -1,0 +1,30 @@
+<body>
+    <h1>Order Details:</h1>
+    <form [formGroup]="Orderdetails" (ngSubmit)="getOrder()">
+        <label>
+            <input type="text" placeholder="orderid" formControlName="orderid">
+        </label> <br>
+
+        <label>
+            <input type="text" placeholder="productname" formControlName="productname">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="productquantity" formControlName="productquantity">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="productprice" formControlName="productprice">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="totalprice" formControlName="totalprice">
+        </label> <br>
+
+        <label>
+            <input type="text" placeholder="Address" formControlName="Address">
+        </label> <br>
+
+        <button type="submit" value="button">submit</button>
+    </form>
+</body>

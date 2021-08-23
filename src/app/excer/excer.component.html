@@ -1,0 +1,34 @@
+<div style="text-align:center">
+    <h3>Date Pipe</h3>
+    <p>{{ currentDate | date:'fullDate' }}<p>      
+    <p>{{ numDateFormat | date:'medium' }}<p>
+    <p>{{ getYear | date:'yy' }}<p>
+    <p>{{ getTime | date:'Hm' }}<p>
+
+        <h3> Currency Pipe</h3>
+        <p>{{ itemPrice1 | currency:'USD':true }}</p>      
+        <p>{{ itemPrice2 | currency:'EUR':true}}</p>
+        <p>{{ itemPrice3 | currency:'INR' }}</p>
+
+        <h3>Decimal Pipe</h3>
+        <p> {{myNum1 | number}} </p>
+          <p> {{myNum2 | number}} </p>
+      
+          <h3>Percentage Pipe</h3>
+          <p>A: {{numA | percent}}</p>
+          <p>B: {{numB | percent:'4.3-5'}}</p>
+
+          <h3>LowerCase & UpperCase Pipe</h3>
+      <p> {{convertText1 | lowercase}} </p>
+        <p> {{convertText2 | uppercase}}  </p>
+        
+        <h3>Slice Pipe</h3>
+        <ul>
+          <li *ngFor="let users of Users | slice:4">
+            {{ users }}
+          </li>
+        </ul>
+
+      </div>
+  
+  

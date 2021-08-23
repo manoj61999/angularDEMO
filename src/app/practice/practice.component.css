@@ -1,0 +1,62 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #bd3e3e;}
+
+input[type=text], input[type=password] {
+    width: 200%;
+    padding: 15px 15px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid rgb(179, 144, 144);
+    box-sizing: border-box;
+    border-radius: 25px;
+  }
+
+
+  .button {
+    background-color: #615d73;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px;
+    border: 2px;
+    cursor: pointer;
+    width: 37%;
+    border-radius: 25px;
+  }
+
+.button:hover{
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: aqua;
+}
+.unamein{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: coral;
+}
+.pws{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: coral;
+}
+.flogin{
+    background-color: cornflowerblue;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: beige; 
+}
+.main{
+    background-color:ghostwhite;
+}
+.uname{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: teal;
+}
+.pasw{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: teal;
+}
+
