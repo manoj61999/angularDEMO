@@ -28,12 +28,34 @@ export class User {
     totalprice: Number | undefined;
     address: String | undefined;
   }
+  export class Addition {
+    firstNumber: Number | undefined;
+    secondNumber: Number | undefined;
+    }
+  export class subraction {
+    firstNumber: Number | undefined;
+    secondNumber: Number | undefined;
+  } 
+  export class multiplication {
+    firstNumber: Number | undefined;
+    secondNumber: Number | undefined;
+  }
+  export class division {
+    firstNumber: Number | undefined;
+    secondNumber: Number | undefined;
+  }
+  
+
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   endPoint = 'http://localhost:3000';
+  AddResult: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -42,6 +64,15 @@ export class DataService {
       'Content-Type': 'application/json'
     })
   }  
+
+
+
+
+
+
+
+  //this method displaying data form MangoDB 
+  //registration.component.ts 
 
   getUsers(): Observable<User> {
     return this.httpClient.get<User>(this.endPoint + '/api/getUserDetails');
@@ -52,6 +83,11 @@ export class DataService {
   getOrder(): Observable<Order> {
     return this.httpClient.get<Order>(this.endPoint + '/api/OrderReview');
   }
+
+
+
+
+
 
 
   //sample.component.ts
@@ -87,4 +123,53 @@ export class DataService {
     return this.httpClient.post<Order>(this.endPoint + '/api/Order', JSON.stringify(sendData), this.httpHeader)
   }
 
+                //addition: getting data from calculator.component.ts
+
+  addCalculator(data: FormGroup): Observable<Addition> {
+    
+    let savedata={
+      "firstNumber":data.value.firstNumber,
+      "secondNumber":data.value.secondNumber
+    }
+    console.log(savedata,"addition")
+    return this.httpClient.post<Addition>(this.endPoint + '/api/Addition', JSON.stringify(savedata), this.httpHeader)
+  }
+
+
+              //subraction: getting data from calculator.component.ts
+
+
+  subCalculator(data: FormGroup): Observable<subraction> {
+
+    let subdata = {
+      "firstNumber":data.value.firstNumber,
+      "secondNumber":data.value.secondNumber
+    }
+    console.log(subdata,"subraction")
+    return this.httpClient.post<subraction>(this.endPoint + '/api/subraction', JSON.stringify(subdata), this.httpHeader)
+  }
+
+
+               //multiplication: getting data from calculator.component.ts
+
+  multiCalculator(data: FormGroup): Observable<multiplication> {
+
+    let multidata = {
+      "firstNumber":data.value.firstNumber,
+      "secondNumber":data.value.secondNumber
+    }
+    console.log(multidata,"multiplication");
+    return this.httpClient.post<multiplication>(this.endPoint + '/api/Multi', JSON.stringify(multidata), this.httpHeader)
+  }
+
+              //division: getting data from calculator.component.ts
+  diviCalculator(data: FormGroup): Observable<division> {
+
+    let dividata = {
+      "firstNumber":data.value.firstNumber,
+      "secondNumber":data.value.secondNumber
+    }
+    console.log(dividata,"division");
+    return this.httpClient.post<division>(this.endPoint +'/api/Division', JSON.stringify(dividata), this.httpHeader)
+  }
 }

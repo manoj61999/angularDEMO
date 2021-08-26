@@ -13,6 +13,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CustomerComponent } from './customer/customer.component';
 import { OrdersComponent } from './orders/orders.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { OrdersComponent } from './orders/orders.component';
     WishlistComponent,
     CustomerComponent,
     OrdersComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,

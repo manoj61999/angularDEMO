@@ -1,0 +1,30 @@
+<body>
+    <h1>simple calculator:</h1>
+    <form [formGroup]="cals" (ngSubmit)="calfunction()">
+        <label>
+        <input type="number" placeholder="firstNumber" formControlName="firstNumber">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="secondNumber" formControlName="secondNumber">
+        </label> <br>
+
+
+        <label>
+        <button (click)="additionFun()" type="submit" id="button1" value="button">add</button><b>Addition :</b>{{Addition}} 
+        </label> <br>
+       
+
+        <label>
+        <button (click)="subractionFun()" type="submit" id="button2" value="button">sub</button><b>Subraction :</b>{{subraction}}
+        </label> <br>
+        <label>
+        <button (click)="multiplicationFun()" type="submit" id="button3" value="button">multi</button><b>Multiplication :</b>{{multiplication}}
+        </label> <br>
+
+        <label>
+            <button input type="submit" (click)="divisionFun()" id="button4" value="button">division</button><b>division :</b>{{division}}
+        </label>
+
+    </form>
+    </body>

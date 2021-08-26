@@ -8,6 +8,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CustomerComponent } from './customer/customer.component';
 import { OrdersComponent } from './orders/orders.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
   {path:'wishlist',component:WishlistComponent},
   {path: 'customer',component:CustomerComponent},
-  {path: 'Order',component:OrdersComponent}
+  {path: 'Order',component:OrdersComponent},
+  {path: 'calculator',component:CalculatorComponent}
 ];
 
 @NgModule({
